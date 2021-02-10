@@ -10,6 +10,9 @@ public class Inventory : MonoBehaviour
     public GameObject cellContainer;
     public KeyCode showInventory;
     public KeyCode takeButton;
+
+    public GameObject messageManager;
+    public GameObject message;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +36,21 @@ public class Inventory : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, itemDistance))
             {
+                Item currentItem = hit.collider.GetComponent<Item>();
+                MessedgeSpawn(currentItem);
                 AddItem(hit.collider.GetComponent<Item>());
             }
         }
+    }
+
+    void MessedgeSpawn(Item currentItem)
+    {
+        GameObject msgObj = Instantiate(message);
+        msgObj.transform.SetParent(messageManager.transform);
+
+        Text msg = msgObj.transform.GetChild(1).GetComponent<Text>();
+        msg.text = currentItem.nameItem;
+
     }
 
     void AddItem(Item currentItem)

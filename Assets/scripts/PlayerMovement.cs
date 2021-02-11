@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
-    public float speed = 12f;
+    public float speed = 10f;
+    public float crouchSpeed = 1f;
+    public float sprintSpeed = 30f;
     public float gravity = -8f;
     public float jumpHeight = 3f;
 
@@ -43,5 +45,25 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        if (Input.GetKey("c"))
+        {
+            controller.height = 1.5f;
+            controller.Move(move * crouchSpeed * Time.deltaTime);
+        }
+        else
+        {
+            controller.height = 3f;
+            controller.Move(move * speed * Time.deltaTime);
+        }
+
+        if
+            (Input.GetKey("left shift"))
+        {
+            controller.Move(move * sprintSpeed * Time.deltaTime);
+        }
+        else
+        {
+            controller.Move(move * speed * Time.deltaTime);
+        }
     }
 }

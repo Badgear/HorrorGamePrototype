@@ -36,9 +36,11 @@ public class Inventory : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, itemDistance))
             {
-                Item currentItem = hit.collider.GetComponent<Item>();
-                MessedgeSpawn(currentItem);
-                AddItem(hit.collider.GetComponent<Item>());
+                if (hit.collider.TryGetComponent(out Item currentItem))
+                {
+                    MessedgeSpawn(currentItem);
+                    AddItem(currentItem); 
+                }
             }
         }
     }

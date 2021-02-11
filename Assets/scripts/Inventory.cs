@@ -48,8 +48,11 @@ public class Inventory : MonoBehaviour
         GameObject msgObj = Instantiate(message);
         msgObj.transform.SetParent(messageManager.transform);
 
-        Text msg = msgObj.transform.GetChild(1).GetComponent<Text>();
-        msg.text = currentItem.nameItem;
+        Image msgImg = msgObj.transform.GetChild(0).GetComponent<Image>();
+        msgImg.sprite = Resources.Load<Sprite>(currentItem.pathIcon);
+
+        Text msgTxt = msgObj.transform.GetChild(1).GetComponent<Text>();
+        msgTxt.text = currentItem.nameItem;
 
     }
 

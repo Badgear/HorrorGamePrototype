@@ -8686,6 +8686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 7655900559379839207, guid: 21faf9e665358bf409e4fd1916cca323,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     - target: {fileID: 7655900559379839200, guid: 21faf9e665358bf409e4fd1916cca323,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -8785,8 +8785,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2129893563}
   - component: {fileID: 2129893558}
-  - component: {fileID: 2129893559}
-  - component: {fileID: 2129893560}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -8813,37 +8811,6 @@ MonoBehaviour:
   impactEffect: {fileID: 2995153782446362746, guid: 51e4592f35b1d42488386a50d86f7814,
     type: 3}
   fpsCam: {fileID: 963194227}
---- !u!95 &2129893559
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129893557}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c190b0d202a4b7e4489533392272fc9d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2129893560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129893557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b8fdcdb58ccfb544a4df197adc70257, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2129893563
 Transform:
   m_ObjectHideFlags: 0
@@ -8885,6 +8852,8 @@ GameObject:
   - component: {fileID: 985244490074947123}
   - component: {fileID: 985244490076241427}
   - component: {fileID: 985244490077240531}
+  - component: {fileID: 985244490074972693}
+  - component: {fileID: 985244490074972692}
   m_Layer: 0
   m_Name: SM_Tri-Revolver
   m_TagString: Untagged
@@ -8892,6 +8861,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &985244490074972692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985244490074972691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8fdcdb58ccfb544a4df197adc70257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &985244490074972693
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985244490074972691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c190b0d202a4b7e4489533392272fc9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &985244490076241427
 MeshFilter:
   m_ObjectHideFlags: 0

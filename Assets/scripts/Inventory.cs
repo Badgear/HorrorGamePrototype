@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public float itemDistance = 10f;
     public GameObject cellContainer;
     public KeyCode showInventory;
-    public KeyCode takeButton;
+    public KeyCode UseButton;
 
     public GameObject messageManager;
     public GameObject message;
@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         ToggleInventory();
-        if (Input.GetKeyDown(takeButton))
+        if (Input.GetKeyDown(UseButton))
         {
             Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
             RaycastHit hit;

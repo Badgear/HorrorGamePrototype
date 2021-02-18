@@ -2038,6 +2038,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 57.640003, y: 28.86, z: 16.58}
+--- !u!1 &784036477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784036478}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784036478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784036477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1683344047}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &806168445 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3217727189626912006, guid: 61ba0c69f64a2214fbb080f1b0d6f3a9,
@@ -2154,6 +2184,7 @@ GameObject:
   - component: {fileID: 937744224}
   - component: {fileID: 937744225}
   - component: {fileID: 937744226}
+  - component: {fileID: 937744227}
   m_Layer: 9
   m_Name: First Person Player
   m_TagString: Player
@@ -2219,6 +2250,20 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &937744227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937744223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0692d75087fe21147803040798643ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  DeathUI: {fileID: 6388647276320382356, guid: b556a79d151ee1b439f943fb536fe4bc, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -8154,6 +8199,7 @@ GameObject:
   - component: {fileID: 1683344049}
   - component: {fileID: 1683344048}
   - component: {fileID: 1683344050}
+  - component: {fileID: 1683344051}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -8230,7 +8276,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -65.98, y: 2.44, z: -86.94}
   m_LocalScale: {x: 1.8957905, y: 2.7143989, z: 2.7143989}
-  m_Children: []
+  m_Children:
+  - {fileID: 784036478}
   m_Father: {fileID: 2103093886}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8256,9 +8303,7 @@ MonoBehaviour:
     m_Bits: 512
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  timeBetweenAttacks: 0
-  projectile: {fileID: 0}
+  walkPointRange: 50
   sightRange: 20
   attackRange: 5
   playerInSightRange: 0
@@ -8297,7 +8342,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f4afd3cd9241940bd94fb3fc75623e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
+--- !u!114 &1683344051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683344043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1c731379d421b4d8dbea8706d40b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  attackPoint: {fileID: 784036478}
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  damage: 20
+  AttackSpeed: 1
 --- !u!1 &1694434770
 GameObject:
   m_ObjectHideFlags: 0
